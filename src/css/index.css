@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    border: 2px solid red;
+    max-width: 1100px;
+    height: 30vh;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+.brand__name{
+    margin: 30px 50px;
+    font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar ul{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.navbar ul{
+
+}
+

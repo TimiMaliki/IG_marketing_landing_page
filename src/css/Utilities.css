@@ -1,0 +1,26 @@
+.w-width{
+    width: 100%;
+}
+.h-height{
+    height: 100%;
+}
+.flex{
+    display: flex;
+}
+.text-decoration{
+    text-decoration: none;
+}
+.outline{
+    outline: none;
+}
+.list-style{
+    list-style: none;
+}
+.justify-content{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.space-between{
+    justify-content: space-between;
+}
