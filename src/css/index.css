@@ -13,8 +13,8 @@
     justify-content: space-between;
 }
 .brand__name{
-    margin: 30px 50px;
-    font-size: 35px;
+    margin: 40px 3px;
+    font-size: 45px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -23,8 +23,23 @@
     display: flex;
     justify-content: center;
     gap: 4rem;
+    
 }
-.navbar ul{
+.navbar a{
+    color:#000;
+    font-weight: 800;
+    font-size: 17px;
+}
+.navbar a:hover{
+    color: #f5761A;
+    content: "";
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #f5761A;
+    transition: all 0.8s ;
+    padding: 10px;
+}
 
-}
+
+
 
