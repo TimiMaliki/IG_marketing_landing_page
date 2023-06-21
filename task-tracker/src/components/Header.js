@@ -37,8 +37,8 @@ function Header({ title }) {
   
    //ToggleReminder
 
-   const toggleRemainder = (id) =>{
-
+   const toggleReminder = (id) =>{
+console.log(id);
    }
 
    const onClick = () => {
@@ -53,7 +53,7 @@ function Header({ title }) {
          <Button color='blue' text='Hello' onClick={onClick} />
       </header>
 
-      {tasks.length > 0 ? <Tasks task={tasks} onDelete={deleteTask} /> : "no task to show"}
+      {tasks.length > 0 ? <Tasks task={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : "no task to show"}
    </div>
 }
 
