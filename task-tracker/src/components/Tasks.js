@@ -1,11 +1,15 @@
  import Task from '../components/Task'
 
-const Tasks = ({task , onDelete ,onToggle}) => {
- 
+const Tasks = ({task, onDelete, onToggle}) => {
+
   return (
     <>
       {task.map((task) => (
-      <Task key={task.id} task={task} onDelete={onDelete}  onToggle={onToggle} />) 
+      <Task key={task.id} 
+      task={task} 
+      onDelete={onDelete}  
+      onToggle={onToggle}
+      />) 
       )}
     </>
   )

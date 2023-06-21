@@ -10,21 +10,21 @@ function Header({ title }) {
             id: 1,
             text: 'Going to code at IT plaza',
             day: ' jun 20, 9:00am',
-            remainder: true,
+            reminder: true,
          },
 
          {
             id: 2,
             text: 'Going to gym',
             day: ' jun 20, 5:30pm',
-            remainder: true,
+           reminder: true,
          },
 
          {
             id: 3,
             text: 'Going to code at home 9:30pm',
             day: ' jun 20, 9:00',
-            remainder: false,
+           reminder: false,
          }
 
       ]
@@ -32,17 +32,23 @@ function Header({ title }) {
    //Deleting Task
 
    const deleteTask = (id) => {
-      setTask(tasks.filter((task) => task.id !==id))
+      setTask(tasks.filter((task) => task.id !== id))
    }
-  
+
    //ToggleReminder
 
-   const toggleReminder = (id) =>{
-console.log(id);
+   const toggleReminder = (id) => {
+      setTask(
+         tasks.map((task) =>
+         task.id === id ? {...task, reminder:!task.reminder} : task
+
+         )
+         
+      )
    }
 
    const onClick = () => {
-     
+   
    }
 
    return <div className='container'>
@@ -53,7 +59,10 @@ console.log(id);
          <Button color='blue' text='Hello' onClick={onClick} />
       </header>
 
-      {tasks.length > 0 ? <Tasks task={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : "no task to show"}
+      {tasks.length > 0 ? <Tasks 
+      task={tasks} 
+      onDelete={deleteTask} 
+      onToggle={toggleReminder} /> : "no task to show"}
    </div>
 }
 
@@ -62,3 +71,5 @@ Header.defaultProps = {
 }
 
 export default Header
+
+
