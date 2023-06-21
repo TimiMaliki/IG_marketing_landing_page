@@ -32,12 +32,17 @@ function Header({ title }) {
    //Deleting Task
 
    const deleteTask = (id) => {
-     setTask(tasks.filter((task) => task.id !==id))
+      setTask(tasks.filter((task) => task.id !==id))
+   }
+  
+   //ToggleReminder
+
+   const toggleRemainder = (id) =>{
+
    }
 
-
    const onClick = () => {
-
+     
    }
 
    return <div className='container'>
@@ -47,7 +52,8 @@ function Header({ title }) {
 
          <Button color='blue' text='Hello' onClick={onClick} />
       </header>
-      <Tasks task={tasks} onDelete={deleteTask} />
+
+      {tasks.length > 0 ? <Tasks task={tasks} onDelete={deleteTask} /> : "no task to show"}
    </div>
 }
 
