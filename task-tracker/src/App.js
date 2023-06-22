@@ -1,12 +1,17 @@
 import Header from './components/Header'
 
+
+
+
 function App() {
-  
   return (
-    <div>
+    <div className='container'>
+ 
+      <Header />
 
-     <Header />
-
+      {/* // passing a prop here
+      onAdd={() => setShowAddTask(!showAddTask)} */}
+  
 
     </div>
   );
